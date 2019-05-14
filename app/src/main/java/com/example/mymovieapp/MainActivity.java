@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText name , email , password , c_password ;
     private Button btn_regist;
     private ProgressBar loading;
-  //  private static String URL_RREGIST = "http://192.168.43.94/android/register.php";
-    private static String URL_RREGIST = "http://192.168.1.7/android/register.php";
+ //   private static String URL_RREGIST = "http://192.168.43.94/android/register.php";
+  //  private static String URL_RREGIST = "http://192.168.1.6/android/register.php";
+      private static String URL_RREGIST = "http://192.168.137.1/android/register.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                         String success = jsonObject.getString("success");
                                         if(success.equals("1")){
                                           //  Toast.makeText(MainActivity.this ,  "Register Seccess" , Toast.LENGTH_LONG).show();
-                                            Intent intent = new Intent(MainActivity.this , HomeActivity.class);
+                                            Intent intent = new Intent(MainActivity.this , LoginActivity.class);
                                             intent.putExtra("name" , name) ;
                                             intent.putExtra("email" , email);
                                             startActivity(intent);
